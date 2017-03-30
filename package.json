@@ -4,7 +4,7 @@
   "description": "React-native library for creating stylesheets that return different styles based on screen size",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,10 @@
   },
   "devDependencies": {
     "eslint": "^3.18.0",
-    "eslint-plugin-node": "^4.2.2"
+    "eslint-plugin-node": "^4.2.2",
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "mock-require": "^2.0.1"
   }
 }

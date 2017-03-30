@@ -35,7 +35,7 @@ function createSized(direction, map) {
 		result[size] = StyleSheet.create(stylesheet);
 
 		return result;
-	});
+	}, {});
 
 	var styleNames = sizes.reduce(function(names, size){
 		return names.concat(Object.keys(map[size]));
@@ -105,14 +105,16 @@ function validSizes(direction, sizes) {
 	var directionName = direction.slice(0, 3);
 	var greater = directionName === "min";
 
-	return sizes.filter(function (size) {
+	var styles = sizes.filter(function (size) {
 		var parsed = parseInt(size, 10);
 		return greater ? (
-			parsed >= dimension
+			dimension >= parsed
 		) : (
-			parsed <= dimension
+			dimension <= parsed
 		);
 	});
+
+	return greater ? styles : styles.reverse();
 }
 
 function getOrientation(){
