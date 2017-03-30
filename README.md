@@ -30,6 +30,8 @@ Creates a responsive stylesheet based size increments or decrements (like media 
 
 The return value is a special kind of stylesheet where when you try to get a style, you will get back an array of all styles that are valid for the current resolution. Check the examples for details.
 
+The values are in the proper order to overwrite each other as they progress.
+
 ### `ResponsiveStylesheet.createOriented(map)`
 
 Creates a responsive stylesheet based on styles for `landscape` and `portrait` orientations
