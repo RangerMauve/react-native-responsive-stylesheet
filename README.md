@@ -57,7 +57,7 @@ var normalStyles = ResponsiveStylesheet.create({
 	}
 });
 
-var responsiveStyles = ResponsiveStylesheet.createcreateOriented({
+var responsiveStyles = ResponsiveStylesheet.createOriented({
 	landscape: {
 		item: {
 			marginHorizontal: 16
