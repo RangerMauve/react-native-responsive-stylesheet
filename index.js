@@ -8,7 +8,9 @@ var VALID_direction = [
 	"min-width",
 	"max-width",
 	"min-height",
-	"max-height"
+	"max-height",
+	"min-direction",
+	"max-direction"
 ];
 
 module.exports = {
@@ -98,9 +100,15 @@ function createOriented(map) {
 
 function validSizes(direction, sizes) {
 	var dimensions = Dimensions.get("window");
+	var width = dimensions.width;
+	var height = dimensions.height;
 
 	var dimensionName = direction.slice(4);
-	var dimension = dimensions[dimensionName];
+	var dimension;
+	if(dimensionName === "direction")
+		dimension = width <= height ? width : height
+	else
+		dimension = dimensions[dimensionName];
 
 	var directionName = direction.slice(0, 3);
 	var greater = directionName === "min";
