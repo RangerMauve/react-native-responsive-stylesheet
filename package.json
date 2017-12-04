@@ -1,6 +1,6 @@
 {
   "name": "react-native-responsive-stylesheet",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React-native library for creating stylesheets that return different styles based on screen size",
   "main": "index.js",
   "scripts": {
