@@ -26,7 +26,9 @@ Creates a responsive stylesheet based size increments or decrements (like media 
 
 `map` is an object literal mapping of `{size: obj}` where `size` is an integer representing pixels, and `obj` is a style definition to use with `.create(obj)`
 
-`direction` is one of "min-width", "max-width", "min-height", or "max-height". It's purpose is to determine whether the `size` represents the `width` or `height`, and whether you should look for `size` values higher or greater than the current screen resolution.
+`direction` is one of "min-width", "max-width", "min-height", "max-height", "min-direction" or "max-direction". It's purpose is to determine whether the `size` represents the `width` or `height`, and whether you should look for `size` values higher or greater than the current screen resolution.
+
+* min/max-direction uses the smallest direction value, `height` or `width`.
 
 The return value is a special kind of stylesheet where when you try to get a style, you will get back an array of all styles that are valid for the current resolution. Check the examples for details.
 
